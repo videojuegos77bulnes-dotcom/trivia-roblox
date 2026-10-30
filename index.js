@@ -19,7 +19,7 @@ const server = http.createServer(async (req, res) => {
                     body: JSON.stringify({
                         contents: [{
                             parts: [{
-                                text: `Genera una pregunta de trivia sobre el tema "${tema}" adecuada para un juego de 9 opciones. Devuelve ÚNICAMENTE un objeto JSON válido con este formato exacto, sin bloques de código ni texto adicional: {"pregunta": "texto", "opciones": ["op1", "op2", "op3", "op4"], "correcta": 1}`
+                                text: `Genera una pregunta de trivia sobre el tema "${tema}" diseñada para una ronda de eliminación de 9 jugadores. Devuelve ÚNICAMENTE un objeto JSON válido con este formato exacto, sin bloques de código ni texto adicional, asegurándote de que la lista de opciones tenga exactamente 9 elementos y el campo "correcta" sea el número de la opción correcta (del 1 al 9): {"pregunta": "texto", "opciones": ["op1", "op2", "op3", "op4", "op5", "op6", "op7", "op8", "op9"], "correcta": 1}`
                             }]
                         }]
                     })
